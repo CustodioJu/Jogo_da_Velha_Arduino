@@ -2,7 +2,7 @@
 
 ## Nome do Projeto: Jogo da velha.
 
-Introdução: 
+##### Introdução: 
 O intuito do jogo que criamos no programa Flowgorithm, é realizar o típico jogo da velha onde imaginamos que todos já tenham tido a experiência de jogá-lo com algum amigo em um pedaço de papel,
 troxemos esse jogo tão comum para o digital, através de um algoritmo, simplificado, trazendo uma forma lúdica de representar o funcionamento da matriz, além de incentivar a criação de pensamentos estratégicos e tomada de decisões.
 
