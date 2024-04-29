@@ -1,4 +1,4 @@
-# Briefing - Jogo_da_Velha_Arduino
+# Briefing - Jogo_da_Velha_Arduino.
 
 ## Nome do Projeto: Jogo da velha.
 
