@@ -20,7 +20,8 @@ O algoritmo deve atuar normalmente como o jogo tradicional, analizando linhas, c
 #### Escopo do projeto: 
 O jogo deve ser jogado por dois jogadores, reconhecendo símbolos(no caso do algoritmo 2, 1 e 0 como casa vazia), reconhecer através da matriz(3x3) os ganhos nas declarações coluna, linha e diagonal, quando estiver três símbolos iguais em uma dessas declarações, determinar vitória ao jogador, caso não encontre os três símbolos, declarar empate aos jogadores e fim da partida.
 
-#### Público alvo: Todos que gostem de jogos competitivos, utilizando estratégia e análise de jogadas.
+#### Público alvo: 
+Todos que gostem de jogos competitivos, utilizando estratégia e análise de jogadas.
 
 
 
