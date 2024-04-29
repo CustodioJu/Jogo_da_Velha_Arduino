@@ -1,6 +1,6 @@
 # Briefing - Jogo_da_Velha_Arduino
 
-Nome do Projeto: Jogo da velha.
+## Nome do Projeto: Jogo da velha.
 
 Introdução: 
 O intuito do jogo que criamos no programa Flowgorithm, é realizar o típico jogo da velha onde imaginamos que todos já tenham tido a experiência de jogá-lo com algum amigo em um pedaço de papel,
