@@ -10,7 +10,7 @@
     var haVencedor;
 
     haVencedor = false;
-    var tabuleiro = createArray(9);
+    var tabuleiro = Array(9);
 
     // Limpar/zerar o tabuleiro
     var index;
@@ -34,9 +34,9 @@
     // Anotar/Registrar a jogada, do primeiro jogador
     velha = 1;
     do {
-     console.log(tabuleiro[0].ToString() + tabuleiro[1] + tabuleiro[2]);
-     console.log(tabuleiro[3].ToString() + tabuleiro[4] + tabuleiro[5]);
-     console.log(tabuleiro[6].ToString() + tabuleiro[7] + tabuleiro[8]);
+     console.log(tabuleiro[0].toString() + tabuleiro[1] + tabuleiro[2]);
+     console.log(tabuleiro[3].toString() + tabuleiro[4] + tabuleiro[5]);
+     console.log(tabuleiro[6].toString() + tabuleiro[7] + tabuleiro[8]);
         jogada = "";
      console.log("Digite a posição da sua peça JOGADOR " + jogadorDaVez);
         jogada = window.prompt('Enter a value for jogada');
@@ -108,8 +108,8 @@ function getValArrayInt(linha, coluna, matriz, qtdeLinhas) {
 function validaPosicao(entrada) {
     var entradaValida;
 
-    entradaValida = false;     console.log(entrada.length());
-    if (entrada.length() == 3) {
+    entradaValida = false;     console.log(entrada.length);
+    if (entrada.length == 3) {
      console.log("Comprimento da string igual  3");
         if (entrada.charAt(0) == "0" || entrada.charAt(0) == "1" || entrada.charAt(0) == "2") {
          console.log(entrada.charAt(0));
