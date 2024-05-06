@@ -62,12 +62,11 @@ void loop() {
         if(tabuleiro[0][0] == jogadordavez && tabuleiro[0][1] == jogadordavez && tabuleiro[0][2] == jogadordavez || tabuleiro[1][0] == jogadordavez && tabuleiro[1][1] == jogadordavez && tabuleiro[1][2] == jogadordavez || tabuleiro[2][0] == jogadordavez && tabuleiro[2][1] == jogadordavez && tabuleiro[2][2] == jogadordavez) {
 
           HaVencedor = true;
-          Serial.println("Há um vencedor!");
         }
 
-        if (jogadordavez == 1) {
+        if (jogadordavez == 1 && HaVencedor == false) {
           jogadordavez = 2;
-        } else {
+        } else if( jogadordavez == 2 && HaVencedor == false ){
           jogadordavez = 1;
         }
 
