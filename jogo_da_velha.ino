@@ -7,11 +7,9 @@ int jogadordavez = 1;
 String jogador1 = "Jogador 1";
 String jogador2 = "Jogador 2";
 String jogada;
-bool HaVencedor;
+bool HaVencedor = false;
 
 bool validaposicao(String entrada){};
-
-
 
 void setup() {
   // put your setup code here, to run once:
@@ -35,10 +33,12 @@ void setup() {
 }
 
 void loop() {
-
-  if (Serial.available() > 0) {
-    String entrada = Serial.readString();
-    Serial.print("Valor da jogada: ");
+	
+    do{
+      
+      while(!Serial.available());
+      String entrada = Serial.readString();
+    	Serial.print("Valor da jogada: ");
     Serial.println(entrada);
 
     linha = entrada.substring(0, 1).toInt();
@@ -58,11 +58,20 @@ void loop() {
             Serial.print(tabuleiro[linha][coluna]);
           }
         }
+
+        if(tabuleiro[0][0] == jogadordavez && tabuleiro[0][1] == jogadordavez && tabuleiro[0][2] == jogadordavez || tabuleiro[1][0] == jogadordavez && tabuleiro[1][1] == jogadordavez && tabuleiro[1][2] == jogadordavez || tabuleiro[2][0] == jogadordavez && tabuleiro[2][1] == jogadordavez && tabuleiro[2][2] == jogadordavez) {
+
+          HaVencedor = true;
+          Serial.println("Há um vencedor!");
+        }
+
         if (jogadordavez == 1) {
           jogadordavez = 2;
         } else {
           jogadordavez = 1;
         }
+
+        velha = velha + 1;
 
 
         Serial.println("");
@@ -80,11 +89,13 @@ void loop() {
       Serial.print("Digite novamente jogador");
       Serial.println(jogadordavez);
     }
-    if (tabuleiro[0][0] == JogadorDaVez && tabuleiro[0][1] == JogadorDaVez && tabuleiro[0][2] == JogadorDaVez || tabuleiro[1][0] == JogadorDaVez && tabuleiro[1][1] == JogadorDaVez && tabuleiro[1][2] == JogadorDaVez || tabuleiro[2][0] == JogadorDaVez && tabuleiro[2][1] == JogadorDaVez && tabuleiro[2][2] == JogadorDaVez)
-      HaVencedor = true;
+    
+    }while(!HaVencedor && velha <= 9);  
+  
+  if(HaVencedor){
+  	Serial.println("VENCEDOR");
+  }else{
+  	Serial.println("VELHA");
   }
-  if (tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez || tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez || tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez && tabuleiro[coluna][linha] == jogadordavez) {
-    HaVencedor = true;
-  }
-}
+  
 }
